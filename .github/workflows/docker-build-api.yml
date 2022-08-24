@@ -24,6 +24,6 @@ jobs:
     - name: Build the Docker image
       run: |
         cd ContainerDemoAPI
-        docker build . --file Dockerfile --tag webappwebapi.azurecr.io/WebAPI:${{ github.run_number }}
-        docker push docker push webappwebapi.azurecr.io/appdb:${{ github.run_number }}
+        docker build . --file Dockerfile --tag webappwebapi.azurecr.io/webapi:${{ github.run_number }}
+        docker push docker push webappwebapi.azurecr.io/webapi:${{ github.run_number }}
 
