@@ -22,7 +22,8 @@ jobs:
         password: ${{ secrets.ACR_PASSWORD }}    
 
     - name: Build the Docker image
-      run: 
-        docker build . --file Dockerfile --tag yourACRname.azurecr.io/WebAPI:${{ github.run_number }}
-        docker push docker push yourACRname.azurecr.io/appdb:${{ github.run_number }}
+      run: |
+        cd WebAPI
+        docker build . --file Dockerfile --tag webappwebapi.azurecr.io/WebAPI:${{ github.run_number }}
+        docker push docker push webappwebapi.azurecr.io/appdb:${{ github.run_number }}
 
